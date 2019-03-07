@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiyue.mapper.ImMsgMapper" >
+  <resultMap id="BaseResultMap" type="com.qiyue.pojo.ImMsg" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="Args" property="args" jdbcType="VARCHAR" />
+    <result column="Content" property="content" jdbcType="VARCHAR" />
+    <result column="MsgSubType" property="msgsubtype" jdbcType="INTEGER" />
+    <result column="MsgType" property="msgtype" jdbcType="INTEGER" />
+    <result column="MsgID" property="msgid" jdbcType="VARCHAR" />
+    <result column="ReceiveID" property="receiveid" jdbcType="INTEGER" />
+    <result column="ReceiveName" property="receivename" jdbcType="VARCHAR" />
+    <result column="RelateID" property="relateid" jdbcType="INTEGER" />
+    <result column="SendID" property="sendid" jdbcType="INTEGER" />
+    <result column="SendName" property="sendname" jdbcType="VARCHAR" />
+    <result column="SendTime" property="sendtime" jdbcType="TIMESTAMP" />
+    <result column="StageID" property="stageid" jdbcType="INTEGER" />
+    <result column="StageName" property="stagename" jdbcType="VARCHAR" />
+    <result column="TopicID" property="topicid" jdbcType="INTEGER" />
+    <result column="CompanyID" property="companyid" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

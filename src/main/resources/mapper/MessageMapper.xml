@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiyue.mapper.MessageMapper" >
+  <resultMap id="BaseResultMap" type="com.qiyue.pojo.Message" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MessageID" property="messageid" jdbcType="INTEGER" />
+    <result column="SendHumanID" property="sendhumanid" jdbcType="INTEGER" />
+    <result column="SendTime" property="sendtime" jdbcType="TIMESTAMP" />
+    <result column="Content" property="content" jdbcType="VARCHAR" />
+    <result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="Status" property="status" jdbcType="INTEGER" />
+    <result column="CompanyID" property="companyid" jdbcType="INTEGER" />
+    <result column="ReceivePhones" property="receivephones" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

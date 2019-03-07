@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiyue.mapper.MessageStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.qiyue.pojo.MessageStatus" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MessageStatusID" property="messagestatusid" jdbcType="INTEGER" />
+    <result column="MessageID" property="messageid" jdbcType="INTEGER" />
+    <result column="Mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="MobileIDs" property="mobileids" jdbcType="VARCHAR" />
+    <result column="Status" property="status" jdbcType="VARCHAR" />
+    <result column="Gateway" property="gateway" jdbcType="VARCHAR" />
+    <result column="CreateTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="UpdateTime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="RepeatTime" property="repeattime" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

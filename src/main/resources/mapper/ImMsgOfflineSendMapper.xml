@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiyue.mapper.ImMsgOfflineSendMapper" >
+  <resultMap id="BaseResultMap" type="com.qiyue.pojo.ImMsgOfflineSend" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MsgSendID" property="msgsendid" jdbcType="INTEGER" />
+    <result column="HumanID" property="humanid" jdbcType="INTEGER" />
+    <result column="HumanName" property="humanname" jdbcType="VARCHAR" />
+    <result column="MsgID" property="msgid" jdbcType="VARCHAR" />
+    <result column="SendCount" property="sendcount" jdbcType="INTEGER" />
+    <result column="MsgOfflineID" property="msgofflineid" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

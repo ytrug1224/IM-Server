@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qiyue.mapper.ImMessageMapper" >
+  <resultMap id="BaseResultMap" type="com.qiyue.pojo.ImMessage" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="attach" property="attach" jdbcType="VARCHAR" />
+    <result column="createAt" property="createat" jdbcType="TIMESTAMP" />
+    <result column="groupId" property="groupid" jdbcType="VARCHAR" />
+    <result column="receiverId" property="receiverid" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="updateAt" property="updateat" jdbcType="TIMESTAMP" />
+    <result column="senderId" property="senderid" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

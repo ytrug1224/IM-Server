@@ -8,10 +8,7 @@ import com.qiyue.mapper.*;
 import com.qiyue.netty.ChatMessage;
 import com.qiyue.netty.DataContent;
 import com.qiyue.netty.UserChannelRelation;
-import com.qiyue.pojo.ChatMsg;
-import com.qiyue.pojo.FriendsRequest;
-import com.qiyue.pojo.MyFriends;
-import com.qiyue.pojo.Users;
+import com.qiyue.pojo.*;
 import com.qiyue.pojo.vo.FriendRequestVO;
 import com.qiyue.pojo.vo.MyFriendsVO;
 import com.qiyue.service.UserService;
@@ -39,6 +36,9 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UsersMapper userMapper;
+
+	@Autowired
+	private TcHumanMapper tcHumanMapper;
 	
 	@Autowired
 	private UsersMapperCustom usersMapperCustom;
@@ -68,6 +68,13 @@ public class UserServiceImpl implements UserService {
 		user.setUsername(username);
 		Users result = userMapper.selectOne(user);
 		return result != null ? true : false;
+	}
+
+	@Override
+	public TcHuman getUserById(Integer userId) {
+		TcHuman user = new TcHuman();
+		user.setHumanId(userId);
+		return tcHumanMapper.selectByPrimaryKey(user);
 	}
 
 	@Transactional(propagation = Propagation.SUPPORTS, rollbackFor = Exception.class)
@@ -204,7 +211,7 @@ public class UserServiceImpl implements UserService {
 		if (sendChannel != null) {
 			// 使用websocket主动推送消息到请求发起者，更新他的通讯录列表为最新
 			DataContent dataContent = new DataContent();
-			dataContent.setDataType(MsgActionEnum.PULL_FRIEND.type);
+			dataContent.setAction(MsgActionEnum.PULL_FRIEND.type);
 			
 			sendChannel.writeAndFlush(new TextWebSocketFrame(JsonUtils.objectToJson(dataContent)));
 		}

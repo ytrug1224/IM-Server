@@ -2,6 +2,7 @@ package com.qiyue.enums;
 
 /**
  * 
+ * @author Administrator
  * @Description: 发送消息的动作 枚举
  */
 public enum MsgActionEnum {
@@ -10,8 +11,9 @@ public enum MsgActionEnum {
 	CHAT(2, "聊天消息"),	
 	SIGNED(3, "消息签收"),
 	KEEPALIVE(4, "客户端保持心跳"),
-	PULL_FRIEND(5, "拉取好友");
-	
+	PULL_FRIEND(5, "拉取好友"),
+	GROUP_CHAT(6, "群聊天");
+
 	public final Integer type;
 	public final String content;
 	

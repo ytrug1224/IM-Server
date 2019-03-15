@@ -2,19 +2,22 @@ package com.qiyue.netty;
 
 import java.io.Serializable;
 
+/**
+ * @author zxj
+ */
 public class DataContent implements Serializable {
     private static final long serialVersionUID = 8021381444738260454L;
 
-    private Integer dataType;
+    private Integer action;
     private ChatMessage chatMsg;
-    private String extand;
+    private String extend;
 
-    public Integer getDataType() {
-        return dataType;
+    public Integer getAction() {
+        return action;
     }
 
-    public void setDataType(Integer dataType) {
-        this.dataType = dataType;
+    public void setAction(Integer action) {
+        this.action = action;
     }
 
     public ChatMessage getChatMsg() {
@@ -25,11 +28,11 @@ public class DataContent implements Serializable {
         this.chatMsg = chatMsg;
     }
 
-    public String getExtand() {
-        return extand;
+    public String getExtend() {
+        return extend;
     }
 
-    public void setExtand(String extand) {
-        this.extand = extand;
+    public void setExtend(String extend) {
+        this.extend = extend;
     }
 }

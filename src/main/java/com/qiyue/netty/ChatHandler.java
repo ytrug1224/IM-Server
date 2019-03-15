@@ -32,12 +32,11 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         String content = msg.text();
 
         Channel currentChannel = ctx.channel();
-
+        System.out.println("dataContent: " + content);
         // 1. 获取客户端发来的消息
         DataContent dataContent = JsonUtils.jsonToPojo(content, DataContent.class);
-        int action = dataContent.getDataType();
+        int action = dataContent.getAction();
         // 2. 判断消息类型，根据不同的类型来处理不同的业务
-
         if (action == MsgActionEnum.CONNECT.type) {
             // 	2.1  当websocket 第一次open的时候，初始化channel，把用的channel和userid关联起来
             String senderId = dataContent.getChatMsg().getSenderId();
@@ -82,7 +81,7 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
             //  2.3  签收消息类型，针对具体的消息进行签收，修改数据库中对应消息的签收状态[已签收]
             UserService userService = (UserService) SpringUtil.getBean("userServiceImpl");
             // 扩展字段在signed类型的消息中，代表需要去签收的消息id，逗号间隔
-            String msgIdsStr = dataContent.getExtand();
+            String msgIdsStr = dataContent.getExtend();
             String msgIds[] = msgIdsStr.split(",");
 
             List<String> msgIdList = new ArrayList<>();
@@ -101,7 +100,10 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         } else if (action == MsgActionEnum.KEEPALIVE.type) {
             //  2.4  心跳类型的消息
             System.out.println("收到来自channel为[" + currentChannel + "]的心跳包...");
+        } else if (action == MsgActionEnum.GROUP_CHAT.type) {
+
         }
+
     }
 
     /**

@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="ID" property="id" jdbcType="INTEGER" />
+    <id column="ID" property="id" jdbcType="VARBINARY" />
     <result column="Content" property="content" jdbcType="VARCHAR" />
     <result column="ContentSub" property="contentsub" jdbcType="VARCHAR" />
     <result column="CreateID" property="createid" jdbcType="INTEGER" />

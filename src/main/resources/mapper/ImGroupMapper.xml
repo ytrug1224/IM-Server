@@ -8,7 +8,7 @@
     <id column="ID" property="id" jdbcType="INTEGER" />
     <result column="CreateID" property="createid" jdbcType="INTEGER" />
     <result column="DeleteFlag" property="deleteflag" jdbcType="INTEGER" />
-    <result column="GroupInfo" property="groupinfo" jdbcType="VARCHAR" />
+    <result column="GroupInfo" property="groupInfo" jdbcType="VARCHAR" />
     <result column="Name" property="name" jdbcType="VARCHAR" />
     <result column="RelateID" property="relateid" jdbcType="INTEGER" />
     <result column="Type" property="type" jdbcType="INTEGER" />

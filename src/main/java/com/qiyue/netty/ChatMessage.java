@@ -1,9 +1,10 @@
 package com.qiyue.netty;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
- * @author Administrator
+ * @author zxj
  */
 public class ChatMessage implements Serializable {
     private static final long serialVersionUID = 3611169682695799175L;
@@ -23,6 +24,10 @@ public class ChatMessage implements Serializable {
      * 用于消息的签收
      */
     private String msgId;
+    /**
+     * 消息发送或接受的时间
+     */
+    private LocalDateTime msgTime = LocalDateTime.now();
 
     public String getSenderId() {
         return senderId;
@@ -56,4 +61,11 @@ public class ChatMessage implements Serializable {
         this.msgId = msgId;
     }
 
+    public LocalDateTime getMsgTime() {
+        return msgTime;
+    }
+
+    public void setMsgTime(LocalDateTime msgTime) {
+        this.msgTime = msgTime;
+    }
 }

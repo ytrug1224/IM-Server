@@ -2,6 +2,7 @@ package com.qiyue.service;
 
 import com.qiyue.netty.ChatMessage;
 import com.qiyue.pojo.ChatMsg;
+import com.qiyue.pojo.TcHuman;
 import com.qiyue.pojo.Users;
 import com.qiyue.pojo.vo.FriendRequestVO;
 import com.qiyue.pojo.vo.MyFriendsVO;
@@ -17,6 +18,11 @@ public interface UserService {
      * @Description: 判断用户名是否存在
      */
     boolean queryUsernameIsExist(String username);
+
+    /**
+     * @Description: 通过用户id查找用户
+     */
+    TcHuman getUserById(Integer userId);
 
     /**
      * @Description: 查询用户是否存在
@@ -46,7 +52,7 @@ public interface UserService {
     /**
      * @Description: 添加好友请求记录，保存到数据库
      */
-    public void sendFriendRequest(String myUserId, String friendUsername);
+    void sendFriendRequest(String myUserId, String friendUsername);
 
     /**
      * @Description: 查询好友请求

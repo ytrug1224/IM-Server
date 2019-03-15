@@ -5,9 +5,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
-/**
- * @author Administrator
- */
 @Table(name = "chat_msg")
 public class ChatMsg {
     @Id
@@ -23,8 +20,9 @@ public class ChatMsg {
 
     /**
      * 消息是否签收状态
-     * 1：签收
-     * 0：未签收
+1：签收
+0：未签收
+
      */
     @Column(name = "sign_flag")
     private Integer signFlag;
@@ -93,8 +91,14 @@ public class ChatMsg {
 
     /**
      * 获取消息是否签收状态
-     * 1：签收
-     * 0：未签收
+1：签收
+0：未签收
+
+     *
+     * @return sign_flag - 消息是否签收状态
+1：签收
+0：未签收
+
      */
     public Integer getSignFlag() {
         return signFlag;
@@ -102,10 +106,14 @@ public class ChatMsg {
 
     /**
      * 设置消息是否签收状态
-     * 1：签收
-     * 0：未签收
+1：签收
+0：未签收
+
      *
      * @param signFlag 消息是否签收状态
+1：签收
+0：未签收
+
      */
     public void setSignFlag(Integer signFlag) {
         this.signFlag = signFlag;

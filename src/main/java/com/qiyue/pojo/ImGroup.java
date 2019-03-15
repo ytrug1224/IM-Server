@@ -18,7 +18,7 @@ public class ImGroup {
     private Integer deleteflag;
 
     @Column(name = "GroupInfo")
-    private String groupinfo;
+    private String groupInfo;
 
     @Column(name = "Name")
     private String name;
@@ -83,15 +83,15 @@ public class ImGroup {
     /**
      * @return GroupInfo
      */
-    public String getGroupinfo() {
-        return groupinfo;
+    public String getGroupInfo() {
+        return groupInfo;
     }
 
     /**
-     * @param groupinfo
+     * @param groupInfo
      */
-    public void setGroupinfo(String groupinfo) {
-        this.groupinfo = groupinfo;
+    public void setGroupInfo(String groupInfo) {
+        this.groupInfo = groupInfo;
     }
 
     /**

@@ -9,7 +9,7 @@ import java.util.Date;
 public class ImTopic {
     @Id
     @Column(name = "ID")
-    private Integer id;
+    private byte[] id;
 
     @Column(name = "Content")
     private String content;
@@ -65,14 +65,14 @@ public class ImTopic {
     /**
      * @return ID
      */
-    public Integer getId() {
+    public byte[] getId() {
         return id;
     }
 
     /**
      * @param id
      */
-    public void setId(Integer id) {
+    public void setId(byte[] id) {
         this.id = id;
     }
 
